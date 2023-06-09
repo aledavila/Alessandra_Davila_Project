@@ -11,6 +11,11 @@ You'll need to create your an API key from: https://the-one-api.dev/
 
 Add an `.env` file to the root of the project and then run.
 
+```
+NEXT_PUBLIC_API_KEY=[your_key_here]
+NEXT_PUBLIC_API_URL=https://the-one-api.dev/v2
+```
+
 To run locally: 
 ```bash
 yarn
