@@ -1,5 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`renders characters unchanged 1`] = `
+<div>
+  <p
+    class="state--handling"
+  >
+    Loading...
+  </p>
+</div>
+`;
+
 exports[`renders homepage unchanged 1`] = `
 <div>
   <div
@@ -100,5 +110,15 @@ exports[`renders homepage unchanged 1`] = `
       </a>
     </footer>
   </div>
+</div>
+`;
+
+exports[`renders movies unchanged 1`] = `
+<div>
+  <p
+    class="state--handling"
+  >
+    Loading...
+  </p>
 </div>
 `;

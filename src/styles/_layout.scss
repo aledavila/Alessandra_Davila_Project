@@ -1,0 +1,25 @@
+.header-title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 1rem 1rem;
+  font-family: 'Cinzel Decorative', cursive;
+
+  h1 {
+    font-size: 24px;
+  }
+
+  > img {
+    margin-right: .5rem;
+  }
+}
+
+
+// Mithril Silver: #C4C9CF
+// Elven Green: #1C532F
+// Hobbiton Brown: #9C6B46
+// Rivendell Blue: #1B325F
+// Gandalf Grey: #787E7C
+// Ringwraith Black: #231F20
+// Gondor White: #F1F1F1
+// Rohan Gold: #CDA323

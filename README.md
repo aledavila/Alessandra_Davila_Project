@@ -1,29 +1,28 @@
-# Next.js + Jest
+# LOTR Database - Liblab
 
-This example shows how to configure Jest to work with Next.js.
+Search all things LOTR: movies, characters, and quotes.
 
-This includes Next.js' built-in support for Global CSS, CSS Modules and TypeScript.
+Link:
 
-## How to Use
+## How to run
 
-Quickly get started using [Create Next App](https://github.com/vercel/next.js/tree/canary/packages/create-next-app#readme)!
+You'll need to create your an API key from: https://the-one-api.dev/
 
-In your terminal, run the following command:
+Add an `.env` file to the root of the project and then run.
 
+To run locally: 
 ```bash
-npx create-next-app --example with-jest with-jest-app
-```
-
-```bash
-yarn create next-app --example with-jest with-jest-app
-```
-
-```bash
-pnpm create next-app --example with-jest with-jest-app
+yarn
+yarn dev
 ```
 
 ## Run Jest Tests
 
 ```bash
-npm test
+yarn test
 ```
+
+## Axe core
+
+Accessibility considerations have been checked using axe-core.
+You can check accessibility tests are passed by going to the console in dev tools. Set up can be found in `utils/reportAccessibility`

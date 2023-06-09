@@ -1,0 +1,24 @@
+.quotes-page {
+  h2 {
+    font-family: 'Cinzel Decorative', cursive;
+    color: #1B325F;
+    margin-bottom: 1rem;
+  }
+}
+
+.quotes-list {
+  list-style: none;
+
+  .quote {
+    margin: 1rem 0;
+    text-indent: -0.45em;
+  }
+  
+  .quote::before {
+      content: open-quote;
+      font-size: 25px;
+  }
+  .quote::after {
+      content: close-quote;
+  }
+}
