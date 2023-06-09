@@ -1,4 +1,4 @@
-# LOTR Database - Liblab
+# LOTR Database
 
 A place for all things LOTR: movies, characters, and quotes.
 A work in progress.
