@@ -1,0 +1,35 @@
+.character-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 200px;
+  border: 1px solid #1B325F;
+  border-radius: 9px;
+  box-shadow: 5px 5px 9px rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+
+  h3 {
+    font-family: 'Cinzel Decorative', cursive;
+    color: #1C532F;
+    word-wrap: break-word;
+  }
+
+  .characteristics {
+    font-size: 14px;
+  }
+
+  .character-links {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .character-links > a {
+    width: 65px;
+    background-color: #C4C9CF;
+    border-radius: 1rem;
+    padding: .2rem 0;
+    font-size: 12px;
+    text-align: center;
+    color: #1B325F;
+  }
+}

@@ -1,0 +1,46 @@
+.movie-card {
+  margin-top: 1rem;
+  padding: 0 1rem;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid #1C532F;
+    padding-bottom: 1rem;
+  }
+
+  p {
+    font-size: 14px;
+  }
+}
+
+.movie-card--header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  h3 {
+    font-family: 'Cinzel Decorative', cursive;
+    color: #1C532F;
+  }
+
+  .rt-score {
+    display: flex;
+    align-items: center;
+    gap: .25rem;
+  }
+}
+
+.runtime {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  margin-bottom: 1rem;
+}
+
+.academy-awards {
+  margin-bottom: 1rem;
+
+  div {
+    display: flex;
+    gap: 1rem;
+  }
+}
