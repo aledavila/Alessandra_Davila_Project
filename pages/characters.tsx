@@ -25,7 +25,6 @@ export default function Characters() {
         const data = await API.fetchAllCharacters();
         setData(data);
       } catch (error) {
-        console.error('Error occurred:', error);
         setError(true);
       } finally {
         setLoading(false);

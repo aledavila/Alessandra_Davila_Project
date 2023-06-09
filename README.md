@@ -1,8 +1,9 @@
 # LOTR Database - Liblab
 
-Search all things LOTR: movies, characters, and quotes.
+A place for all things LOTR: movies, characters, and quotes.
+A work in progress.
 
-Link:
+Link: 
 
 ## How to run
 

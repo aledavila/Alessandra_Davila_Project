@@ -23,7 +23,6 @@ const Character: NextPage<CharacterProps> = ({ characterName }) => {
         const quotes = await API.fetchQuotesByCharacter(characterName);
         setQuotes(quotes);
       } catch (error) {
-        console.error('Error occurred:', error);
         setError(true);
       } finally {
         setLoading(false);
