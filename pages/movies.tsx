@@ -1,29 +1,30 @@
 import React, { useState, useEffect } from 'react';
-import * as API from '../src/api';
 import MovieCard from '@/components/movieCard';
+import Page from '@/components/page';
+import * as API from '../src/api';
 
 interface MovieData {
-  name: string;
+  _id: string;
   academyAwardNominations?: number;
   academyAwardWins?: number;
   boxOfficeRevenueInMillions?: number;
   budgetInMillions?: number;
+  name: string;
   rottenTomatoesScore?: number;
   runtimeInMinutes?: number;
-  _id: string;
 }
 
 export default function Movies() {
-  const [data, setData] = useState<MovieData[]>([]);
-  const [error, setError] = useState(false);
-  const [loading, setLoading] = useState(true);
+  const [movies, setMovies] = useState<MovieData[]>([]);
+  const [error, setError] = useState<boolean>(false);
+  const [loading, setLoading] = useState<boolean>(true);
 
 
   useEffect(() => {
     const fetchAllMovies = async () => {
       try {
         const data = await API.fetchAllMovies();
-        setData(data);
+        setMovies(data);
       } catch {
         setError(true);
       } finally {
@@ -34,27 +35,11 @@ export default function Movies() {
     fetchAllMovies();
   }, []);
 
-  if (loading) {
-    return (
-      <p className='state--handling'>Loading...</p>
-    )
-  }
-
-  if (error) {
-    return (
-      <p className='state--handling'>Error</p>
-    )
-  }
-
-  console.log({ data, error, loading });
-
   return (
-    <>
-      <div className="movie-page">
-        {data.map((movie) => (
-          <MovieCard key={movie._id} {...movie} />
-        ))}
-      </div>
-    </>
-  )
+    <Page className='movie-page' error={error} headTitle='LOTR Movies' loading={loading}>
+      {movies.map((movie) => (
+        <MovieCard key={movie._id} {...movie} />
+      ))}
+    </Page>
+  );
 }

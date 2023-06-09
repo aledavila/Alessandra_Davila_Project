@@ -2,24 +2,22 @@ import React from 'react';
 import Link from 'next/link';
 
 interface CharacterCardProps {
-  name: string;
-  race?: string;
   birth?: string;
   death?: string;
-  _id: string;
-  spouse?: string;
+  name: string;
+  race?: string;
   realm?: string;
+  spouse?: string;
   wikiUrl: string;
 }
 
 const CharacterCard: React.FC<CharacterCardProps> = ({
-  name,
-  race,
   birth,
   death,
-  _id,
-  spouse,
+  name,
+  race,
   realm,
+  spouse,
   wikiUrl,
 }) => {
   return (

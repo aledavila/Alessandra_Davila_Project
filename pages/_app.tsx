@@ -1,9 +1,8 @@
 import React from 'react'
+import type { AppProps } from 'next/app'
+import Layout from '@/components/layout'
 import reportAccessibility from '../utils/reportAccessibility'
 import '@/styles/global.scss'
-import type { AppProps } from 'next/app'
-
-import Layout from '@/components/layout'
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   return (

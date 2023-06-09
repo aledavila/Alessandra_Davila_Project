@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { NextPage, NextPageContext } from 'next';
+import Page from '@/components/page';
 import * as API from '../../src/api';
 
 interface Quote {
@@ -14,14 +15,14 @@ interface CharacterProps {
 
 const Character: NextPage<CharacterProps> = ({ characterName }) => {
   const [quotes, setQuotes] = useState<Quote[]>([]);
-  const [error, setError] = useState(false);
-  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<boolean>(false);
+  const [loading, setLoading] = useState<boolean>(true);
 
   useEffect(() => {
     const fetchCharacterQuotes = async () => {
       try {
-        const quotes = await API.fetchQuotesByCharacter(characterName);
-        setQuotes(quotes);
+        const data = await API.fetchQuotesByCharacter(characterName);
+        setQuotes(data);
       } catch (error) {
         setError(true);
       } finally {
@@ -32,27 +33,19 @@ const Character: NextPage<CharacterProps> = ({ characterName }) => {
     fetchCharacterQuotes();
   }, [characterName]);
 
-  if (loading) {
-    return <p className='state--handling'>Loading...</p>;
-  }
-
-  if (error) {
-    return <p className='state--handling'>Error</p>;
-  }
-
-  if (quotes.length === 0) {
+  if (!error && !loading && quotes.length === 0) {
     return <p className='state--handling'>No quotes found for this character.</p>;
   }
 
   return (
-    <div className='quotes-page'>
+    <Page className='quotes-page' error={error} headTitle='LOTR Character' loading={loading}>
       <h2>{characterName}</h2>
       <div className='quotes-list'>
         {quotes.map((quote) => (
           <blockquote key={quote._id} className='quote'>{quote.dialog}</blockquote>
         ))}
       </div>
-    </div>
+    </Page>
   );
 };
 

@@ -1,28 +1,24 @@
 import React from 'react';
-import Link from 'next/link';
 import Image from 'next/image';
 
 interface MovieCardProps {
-  name: string;
   academyAwardNominations?: number;
   academyAwardWins?: number;
   boxOfficeRevenueInMillions?: number;
   budgetInMillions?: number;
+  name: string;
   rottenTomatoesScore?: number;
   runtimeInMinutes?: number;
-  _id: string;
 }
 
-
 const MovieCard: React.FC<MovieCardProps> = ({
-  name,
   academyAwardNominations,
   academyAwardWins,
   boxOfficeRevenueInMillions,
   budgetInMillions,
+  name,
   rottenTomatoesScore,
   runtimeInMinutes,
-  _id,
 }) => {
   const roundedRottenTomatoesScore = rottenTomatoesScore ? Math.round(rottenTomatoesScore) : null;
 

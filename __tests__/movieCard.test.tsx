@@ -3,7 +3,7 @@ import MovieCard from '@/components/movieCard'
 
 describe('MovieCard', () => {
   it('should render MovieCard and has a name', () => {
-    render(<MovieCard name='Test Card' _id='1'/>)
+    render(<MovieCard name='Test Card' />)
 
     expect(screen.getByText('Test Card')).toBeInTheDocument();
   })
